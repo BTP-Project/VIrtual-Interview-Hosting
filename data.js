@@ -18,7 +18,7 @@ app.get('/',function(req,res){
 })
 app.get('/profile',function (req,res){
     let mysql  = require('mysql');
-    let connection = mysql.'/sql'createConnection(config);
+    let connection = mysql.createConnection(config);
     let sql = `SELECT * FROM database WHERE MISNo = ${MIS};`;
     connection.query(sql,function (error,result,fields) {
         if (!!error) {
