@@ -16,15 +16,10 @@ let config = {
 app.get('/',function(req,res){
     res.sendFile(path.join(__dirname,'/info.html'));
 })
-
-// app.get('/success',function (req,res){
-//     res.sendFile(path.join(__dirname,'/info1.html'))
-// })
-
 app.get('/profile',function (req,res){
     let mysql  = require('mysql');
     let connection = mysql.'/sql'createConnection(config);
-    let sql = `SELECT * FROM databae WHERE MISNo = ${MIS};`;
+    let sql = `SELECT * FROM database WHERE MISNo = ${MIS};`;
     connection.query(sql,function (error,result,fields) {
         if (!!error) {
             res.sendFile(path.join(__dirname, '/info1.html'));
@@ -37,9 +32,6 @@ app.get('/profile',function (req,res){
             var mobileno = result[0].Address;
             var resumeurl = result[0].ResumeURL;
             var emailid = result[0].EmailID;
-            // console.log(name);
-            // console.log(age);
-
         }
     })
 
@@ -59,14 +51,13 @@ app.get('/sqlin',function (req,res){
 
     let mysql  = require('mysql');
     let connection = mysql.createConnection(config);
-    let sql = `INSERT INTO databae(MISNo,Name,Institute,Age,MobileNo,Address,ResumeURL,EmailID) VALUES (${MisNo},'${Name}','${Institute}',${Age},'${MobileNo}','${Address}','${ResumeURL}','${EmailID}');`;
+    let sql = `INSERT INTO database(MISNo,Name,Institute,Age,MobileNo,Address,ResumeURL,EmailID) VALUES (${MisNo},'${Name}','${Institute}',${Age},'${MobileNo}','${Address}','${ResumeURL}','${EmailID}');`;
     connection.query(sql,function (error,rows,fields){
         if(!!error){
             
             return res.sendFile(path.join(__dirname,'/info1.html'));
         }else{
             res.redirect('/profile');
-            //res.sendFile(path.join(__dirname,'/login.html'));
         }
     });
     connection.end();
