@@ -3,35 +3,30 @@
     <meta charset="UTF-8">
     <title>Profile</title>
     <style>
-        body{
-            background-image: url("background.jpg");
+        html{
+            background: deepskyblue;
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-attachment: fixed;
         }
-        .container{
-            width: 40%;
-            height: auto;
-            margin: 20px auto;
-            background: white;
-            position: relative;
-        }
         .notecontainer{
             width: 90%;
             height: auto;
-            margin: 10px auto;
+            margin: 40px auto;
             background: white;
             position: relative;
         }
-        .container label{
+        .notecontainer label{
             color: rgb(95, 84, 84);
             font-size: large;
             border-radius: 5px;
             padding-left: 8%;
             font-family: "Comic Sans MS";
+            font-weight: bold;
+
         }
         .notecontainer h2{
-            color: red;
+            color: black;
             border-radius: 5px;
             padding-left: 8%;
             font-family: "Comic Sans MS";
@@ -45,22 +40,32 @@
         }
         .rcorners2 {
             border-radius: 25px;
-            border: 2px solid #73AD21;
+            border: 2px solid darkblue;
             padding: 20px;
         }
-
+        button{
+            color: blue;
+            background-color: white;
+            font-family: "Comic Sans MS";
+            border: 0px;
+        }
     </style>
 </head>
 <body>
-<div class="notecontainer">
-    <h1><center>Profile</center></h1>
-    <label>Name: </label><%= Name %><br>
-    <label>MIS No.: </label><%= MisNo %><br>
-    <label>Institute: </label><%= Institute %><br>
-    <label>Age: </label><%= Age %><br>
-    <label>Mobile No.: </label><%= MobileNo %><br>
-    <label>Resume URL: </label><%= ResumeURL %><br>
-    <label>Email ID: </label><%= EmailID %><br>
+<div class="notecontainer rcorners2">
+    <h2><center><b><u>Profile</u></b></center></h2>
+    <label>Name: </label><%= Name %><br><br>
+    <label>MIS No.: </label><%= MisNo %><br><br>
+    <label>Institute: </label><%= Institute %><br><br>
+    <label>Age: </label><%= Age %><br><br>
+    <label>Mobile No.: </label><%= MobileNo %><br><br>
+    <label>Resume URL: </label><button onclick="myFunction()"><u><%= ResumeURL %></u></button><br><br>
+    <label>Email ID: </label><%= EmailID %><br><br>
 </div>
+<script>
+    function myFunction() {
+        window.open("<%= ResumeURL %>");
+    }
+</script>
 </body>
 </html>
