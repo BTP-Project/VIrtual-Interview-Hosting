@@ -25,7 +25,7 @@ app.set('view engine','ejs');
 app.get('/profile',function (req,res){
     let mysql  = require('mysql');
     let connection = mysql.createConnection(config);
-    let sql = `SELECT * FROM databae WHERE MISNo = ${MIS};`;
+    let sql = `SELECT * FROM formdatabase WHERE MISNo = ${MIS};`;
     connection.query(sql,function (error,result,fields) {
         if (!!error) {
             res.sendFile(path.join(__dirname, '/info1.html'));
@@ -67,7 +67,7 @@ app.post('/sqlin',function (req,res){
 
     let mysql  = require('mysql');
     let connection = mysql.createConnection(config);
-    let sql = `INSERT INTO databae(MISNo,Name,Institute,Age,MobileNo,Address,ResumeURL,EmailID) VALUES (${MisNo},'${Name}','${Institute}',${Age},'${MobileNo}','${Address}','${ResumeURL}','${EmailID}');`;
+    let sql = `INSERT INTO formdatabase(MISNo,Name,Institute,Age,MobileNo,Address,ResumeURL,EmailID) VALUES (${MisNo},'${Name}','${Institute}',${Age},'${MobileNo}','${Address}','${ResumeURL}','${EmailID}');`;
     connection.query(sql,function (error,rows,fields){
         if(!!error){
             
