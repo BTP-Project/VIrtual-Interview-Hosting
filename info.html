@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <link rel="stylesheet" type="text/css" href="css/container.css"/>
+    <link rel="stylesheet" type="text/css" href="css/label.css"/>
+    <link rel="stylesheet" type="text/css" href="css/input.css"/>
+    <link rel="stylesheet" type="text/css" href="css/button.css"/>
+    <link rel="stylesheet" type="text/css" href="css/background.css"/>
+    <link rel="stylesheet" type="text/css" href="css/anchor.css"/>
+    <link rel="stylesheet" type="text/css" href="css/textarea.css"/>
+    <link rel="stylesheet" type="text/css" href="css/note.css"/>
+    <link rel="stylesheet" type="text/css" href="css/anchor.css"/>
+
+</head>
+<body>
+<div class="notecontainer rcorners2">
+    <h2><center><u>Note:</u></center></h2>
+    <ul>
+        <li>
+            For general instruction regarging filling form, click on the botton below.<br>
+            <a href="pdf/instructions.pdf"  target="_blank"><b>Instructions</b></a>
+        </li>
+        <li>In MIS Coloumn you have write MIS as College code + College MIS
+            (e.g. If your MIS is 5077 and College Code is 1234 then you have to write 12345077)
+            To check your college code,click on the button below:<br>
+            <a href="pdf/colleges.pdf"  target="_blank"><b>College Code</b></a>
+        </li>
+    </ul><br>
+</div>
+<div class="container rcorners2">
+    <form action="/sqlin" name="form">
+        <labeL><h1><center>Information</center></h1></labeL>
+        <label>Full Name<span style="color:#ff0000">*</span>
+        <input type="text" name="FullName" id="FullName" required><br>
+        <label>Institute</label><span style="color:#ff0000">*</span>
+        <input type="text" name="Institute" id="Institute" required><br>
+        <label>MIS No.</label><span style="color:#ff0000">*</span>
+        <input type="number" name="Mis" id="Mis" placeholder="College Code + College MIS Number" required><br>
+        <label>Age</label><span style="color:#ff0000">*</span>
+        <input type="number" name="Age" id="Age" required><br>
+        <label>Mobile Number</label><span style="color:#ff0000">*</span>
+        <input type="number" name="MobileNo" id="MobileNo" required><br>
+        <label>Email ID</label><span style="color:#ff0000">*</span>
+        <input type="text" name="EmailID" id="EmailID" required><br>
+        <label>Resume URL</label><span style="color:#ff0000">*</span>
+        <input type="text" name="ResumeURL" id="ResumeURL" required><br>
+        <label>Address</label><span style="color:#ff0000">*</span>
+        <textarea id="Address" name="Address" required></textarea>
+        <input type="submit" value="Submit"><br><br>
+    </form>
+</div>
+<div class="notecontainer rcorners2">
+    <p>
+        For any further query regarding form filling :<br><br>
+        <b>Contact No.:</b> 9575931349 (Mon-Fri, between 11:00AM-8:00PM) <br>
+        <b>Email: </b>nalinagrawal.iiitp@gmail.com
+    </p>
+</div>
+
+</body>
+</html>

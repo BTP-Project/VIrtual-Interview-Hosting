@@ -1,0 +1,13 @@
+textarea {
+    width: 85%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fffefe;
+    font-size: 16px;
+    transform: translateX(9%);
+    resize: none;
+    font-family:Comic Sans MS;
+  }
