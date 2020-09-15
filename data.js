@@ -2,8 +2,11 @@ var express =require('express');
 var path = require('path');
 var app = express();
 const port = process.env.PORT || 1337;
+const bodyParser=require('body-parser');
 
 var MIS;
+
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(express.static('public'));
 let config = {
@@ -17,13 +20,11 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname,'/info.html'));
 })
 
-// app.get('/success',function (req,res){
-//     res.sendFile(path.join(__dirname,'/info1.html'))
-// })
-
+app.set('views',path.join(__dirname,'views'));
+app.set('view engine','ejs');
 app.get('/profile',function (req,res){
     let mysql  = require('mysql');
-    let connection = mysql.'/sql'createConnection(config);
+    let connection = mysql.createConnection(config);
     let sql = `SELECT * FROM databae WHERE MISNo = ${MIS};`;
     connection.query(sql,function (error,result,fields) {
         if (!!error) {
@@ -37,23 +38,30 @@ app.get('/profile',function (req,res){
             var mobileno = result[0].Address;
             var resumeurl = result[0].ResumeURL;
             var emailid = result[0].EmailID;
-            // console.log(name);
-            // console.log(age);
 
+            res.render('profile.ejs',{
+                MisNo: misno,
+                Name: name,
+                Institute: institute,
+                Age: age,
+                MobileNo: mobileno,
+                ResumeURL: resumeurl,
+                EmailID: emailid
+            });
         }
     })
 
 })
 
-app.get('/sqlin',function (req,res){
-    var Name = req.query.FullName;
-    var MisNo = req.query.Mis;
-    var MobileNo = req.query.MobileNo;
-    var Address = req.query.Address;
-    var Age = req.query.Age;
-    var Institute = req.query.Institute;
-    var ResumeURL = req.query.ResumeURL;
-    var EmailID = req.query.EmailID;
+app.post('/sqlin',function (req,res){
+    var Name = req.body.FullName;
+    var MisNo = req.body.Mis;
+    var MobileNo = req.body.MobileNo;
+    var Address = req.body.Address;
+    var Age = req.body.Age;
+    var Institute = req.body.Institute;
+    var ResumeURL = req.body.ResumeURL;
+    var EmailID = req.body.EmailID;
 
     MIS = MisNo;
 
@@ -65,8 +73,7 @@ app.get('/sqlin',function (req,res){
             
             return res.sendFile(path.join(__dirname,'/info1.html'));
         }else{
-            res.redirect('/profile');
-            //res.sendFile(path.join(__dirname,'/login.html'));
+            return res.redirect('/profile');
         }
     });
     connection.end();

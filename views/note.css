@@ -1,0 +1,18 @@
+.notecontainer h2{
+    color: red;
+    border-radius: 5px;
+    padding-left: 8%;
+    /*font-family: "Comic Sans MS";*/
+
+}
+li{
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    /*font-family: "Comic Sans MS";*/
+}
+.rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+}

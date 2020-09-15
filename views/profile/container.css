@@ -1,0 +1,14 @@
+.container{
+    width: 40%;
+    height: auto;
+    margin: 20px auto;
+    background: white;
+    position: relative;
+}
+.notecontainer{
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    background: white;
+    position: relative;
+}

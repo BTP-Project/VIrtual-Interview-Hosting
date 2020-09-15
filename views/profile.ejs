@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <style>
+        body{
+            background-image: url("background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        .container{
+            width: 40%;
+            height: auto;
+            margin: 20px auto;
+            background: white;
+            position: relative;
+        }
+        .notecontainer{
+            width: 90%;
+            height: auto;
+            margin: 10px auto;
+            background: white;
+            position: relative;
+        }
+        .container label{
+            color: rgb(95, 84, 84);
+            font-size: large;
+            border-radius: 5px;
+            padding-left: 8%;
+            font-family: "Comic Sans MS";
+        }
+        .notecontainer h2{
+            color: red;
+            border-radius: 5px;
+            padding-left: 8%;
+            font-family: "Comic Sans MS";
+
+        }
+        li{
+            color: black;
+            font-weight: bold;
+            font-size: medium;
+            font-family: "Comic Sans MS";
+        }
+        .rcorners2 {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="notecontainer">
+    <h1><center>Profile</center></h1>
+    <label>Name: </label><%= Name %><br>
+    <label>MIS No.: </label><%= MisNo %><br>
+    <label>Institute: </label><%= Institute %><br>
+    <label>Age: </label><%= Age %><br>
+    <label>Mobile No.: </label><%= MobileNo %><br>
+    <label>Resume URL: </label><%= ResumeURL %><br>
+    <label>Email ID: </label><%= EmailID %><br>
+</div>
+</body>
+</html>
