@@ -78,6 +78,7 @@ app.post('/sqlin',function (req,res){
     });
     connection.end();
 })
+<<<<<<< HEAD
 app.get('/update',function (req,res){
     res.sendFile(path.join(__dirname,'/update.html'))
 })
@@ -109,3 +110,6 @@ app.post('/update',function (req,res){
 })
 
 app.listen(port);
+=======
+app.listen(port);
+>>>>>>> origin/master
