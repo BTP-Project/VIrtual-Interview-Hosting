@@ -49,9 +49,72 @@
             font-family: "Comic Sans MS";
             border: 0px;
         }
+
+
+        .nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navli {
+            float: left;
+        }
+
+        .navbar {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar:hover{
+            background-color: #111;
+        }
+        .active:hover{
+            background-color: #45a049;
+        }
+        .active {
+            background-color: #73AD21;
+        }
+        .navdiv{
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            padding-left: 0px;
+        }
     </style>
 </head>
 <body>
+<div class ="navdiv">
+    <ul class="nav">
+        <li><a href="/home" class="navbar navli" onclick="myHome()">Home</a></li>
+        <li><a href="/profile" class="navbar navli" onclick="myProfile()">Profile</a></li>
+        <li><a href="/update"  class="navbar navli" onclick="myUpdate()">Update</a></li>
+        <li><a href="/"  class="navbar navli" onclick="myRegister()">Register</a></li>
+        <li style="float:right"><a class="active navbar navli" href="#about" onclick="myAboutus()">About Us</a></li>
+    </ul>
+    <script>
+        function myHome() {
+            nction myProfile() {
+                window.open("/home");
+            }
+            fu  window.open("/profile");
+        }
+        function myUpdate() {
+            window.open("/update");
+        }
+        function myRegister() {
+            window.open("/");
+        }
+        function myAboutUs() {
+            window.open("/aboutus");
+        }
+    </script>
+</div>
 <div class="notecontainer rcorners2">
     <h2><center><b><u>Profile</u></b></center></h2>
     <label>Name: </label><%= Name %><br><br>

@@ -78,4 +78,34 @@ app.post('/sqlin',function (req,res){
     });
     connection.end();
 })
+app.get('/update',function (req,res){
+    res.sendFile(path.join(__dirname,'/update.html'))
+})
+app.post('/update',function (req,res){
+
+    var Name = req.body.FullName;
+    var MobileNo = req.body.MobileNo;
+    var Address = req.body.Address;
+    var Age = req.body.Age;
+    var Institute = req.body.Institute;
+    var ResumeURL = req.body.ResumeURL;
+    var EmailID = req.body.EmailID;
+
+    var MisNo = MIS
+
+    let mysql  = require('mysql');
+    let connection = mysql.createConnection(config);
+    let sql = `UPDATE formdatabase SET Name ='${Name}',Institute='${Institute}',Age = ${Age},MobileNo = '${MobileNo}',Address = '${Address}',ResumeURL = '${ResumeURL}',EmailID ='${EmailID}' WHERE MISNo = ${MisNo};`;
+
+    connection.query(sql,function (error,rows,fields){
+        if(!!error){
+
+            return res.sendFile(path.join(__dirname,'/update1.html'));
+        }else{
+            return res.redirect('/profile');
+        }
+    });
+    connection.end();
+})
+
 app.listen(port);

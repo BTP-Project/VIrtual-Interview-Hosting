@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Info</title>
+    <title>Update</title>
     <link rel="stylesheet" type="text/css" href="css/container.css"/>
     <link rel="stylesheet" type="text/css" href="css/label.css"/>
     <link rel="stylesheet" type="text/css" href="css/input.css"/>
@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/anchor.css"/>
     <link rel="stylesheet" type="text/css" href="css/Navbar.css"/>
 </head>
+
 <body>
 <div class ="navdiv">
     <ul class="nav">
@@ -46,44 +47,39 @@
     <ul>
         <li>
             For general instruction regarging filling form, click on the botton below.<br>
-            <a href="pdf/instructions.pdf"  target="_blank" class="note"><b>Instructions</b></a>
+            <a href="pdf/instructions.pdf"  class="note" target="_blank"><b>Instructions</b></a>
         </li>
-        <li>In MIS Coloumn you have write MIS as College code + College MIS
-            (e.g. If your MIS is 5077 and College Code is 1234 then you have to write 12345077)
-            To check your college code,click on the button below:<br>
-            <a href="pdf/colleges.pdf"  target="_blank" class="note"><b>College Code</b></a>
+        <li>All data need to be refiilled, as every detail would be re-updated(except MIS No.)
+            which couldnt be changed.
         </li>
     </ul><br>
 </div>
 <div class="container rcorners2">
-    <form action="/sqlin" name="form" method="post">
-        <labeL><h1><center>Information</center></h1></labeL>
+    <form action="/update" name="form" method="post">
+        <labeL><h1><center>Information Correction</center></h1></labeL>
 
-        <label>Full Name<span style="color:#ff0000">*</span>
-        <input type="text" name="FullName" id="FullName" class="main" required><br>
+            <label>Full Name<span style="color:#ff0000">*</span>
+            <input type="text" name="FullName" id="FullName" required><br>
 
-        <label>Institute</label><span style="color:#ff0000">*</span>
-        <input type="text" name="Institute" id="Institute"  class="main"  required><br>
+            <label>Institute</label><span style="color:#ff0000">*</span>
+            <input type="text" name="Institute" id="Institute" required><br>
 
-        <label>MIS No.</label><span style="color:#ff0000">*</span>
-        <input type="number" name="Mis" id="Mis" placeholder="College Code + College MIS Number"  class="main"  required><br>
+            <label>Age</label><span style="color:#ff0000">*</span>
+            <input type="number" name="Age" id="Age" required><br>
 
-        <label>Age</label><span style="color:#ff0000">*</span>
-        <input type="number" name="Age" id="Age"  class="main"  required><br>
+            <label>Mobile Number</label><span style="color:#ff0000">*</span>
+            <input type="number" name="MobileNo" id="MobileNo" required><br>
 
-        <label>Mobile Number</label><span style="color:#ff0000">*</span>
-        <input type="number" name="MobileNo" id="MobileNo"  class="main"  required><br>
+            <label>Email ID</label><span style="color:#ff0000">*</span>
+            <input type="text" name="EmailID" id="EmailID" required><br>
 
-        <label>Email ID</label><span style="color:#ff0000">*</span>
-        <input type="text" name="EmailID" id="EmailID"  class="main"  required><br>
+            <label>Resume URL</label><span style="color:#ff0000">*</span>
+            <input type="text" name="ResumeURL" id="ResumeURL" required><br>
 
-        <label>Resume URL</label><span style="color:#ff0000">*</span>
-        <input type="text" name="ResumeURL" id="ResumeURL"   class="main" required><br>
+            <label>Address</label><span style="color:#ff0000">*</span>
+            <textarea id="Address" name="Address" required></textarea>
 
-        <label>Address</label><span style="color:#ff0000">*</span>
-        <textarea id="Address" name="Address" required></textarea>
-
-        <input type="submit" value="Submit"  class="main" ><br><br>
+            <input type="submit" value="Submit"><br><br>
     </form>
 </div>
 <div class="notecontainer rcorners2">
@@ -93,6 +89,5 @@
         <b>Email: </b>nalinagrawal.iiitp@gmail.com
     </p>
 </div>
-
 </body>
 </html>

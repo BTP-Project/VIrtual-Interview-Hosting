@@ -12,46 +12,82 @@
     <link rel="stylesheet" type="text/css" href="css/textarea.css"/>
     <link rel="stylesheet" type="text/css" href="css/note.css"/>
     <link rel="stylesheet" type="text/css" href="css/anchor.css"/>
+    <link rel="stylesheet" type="text/css" href="css/Navbar.css"/>
 
 </head>
 <body>
 <script>
     alert("Some error has orrcured.Fill correct details.");
 </script>
+<div class ="navdiv">
+    <ul class="nav">
+        <li><a href="/home" class="navbar navli" onclick="myHome()">Home</a></li>
+        <li><a href="/profile" class="navbar navli" onclick="myProfile()">Profile</a></li>
+        <li><a href="/update"  class="navbar navli" onclick="myUpdate()">Update</a></li>
+        <li><a href="/"  class="navbar navli" onclick="myRegister()">Register</a></li>
+        <li style="float:right"><a class="active navbar navli" href="#about" onclick="myAboutus()">About Us</a></li>
+    </ul>
+    <script>
+        function myHome() {
+            window.open("/home");
+        }
+        function myProfile() {
+            window.open("/profile");
+        }
+        function myUpdate() {
+            window.open("/update");
+        }
+        function myRegister() {
+            window.open.replace("/");
+        }
+        function myAboutUs() {
+            window.location.replace("/aboutus");
+        }
+    </script>
+</div>
 <div class="notecontainer rcorners2">
     <h2><center><u>Note:</u></center></h2>
     <ul>
         <li>
             For general instruction regarging filling form, click on the botton below.<br>
-            <a href="pdf/instructions.pdf"  target="_blank"><b>Instructions</b></a>
+            <a href="pdf/instructions.pdf"  target="_blank" class="note"><b>Instructions</b></a>
         </li>
         <li>In MIS Coloumn you have write MIS as College code + College MIS
             (e.g. If your MIS is 5077 and College Code is 1234 then you have to write 12345077)
             To check your college code,click on the button below:<br>
-            <a href="pdf/colleges.pdf"  target="_blank"><b>College Code</b></a>
+            <a href="pdf/colleges.pdf"  target="_blank" class="note"><b>College Code</b></a>
         </li>
     </ul><br>
 </div>
 <div class="container rcorners2">
     <form action="/sqlin" name="form" method="post">
         <labeL><h1><center>Information</center></h1></labeL>
+
         <label>Full Name<span style="color:#ff0000">*</span>
-            <input type="text" name="FullName" id="FullName" required><br>
+            <input type="text" name="FullName" id="FullName" class="main" required><br>
+
             <label>Institute</label><span style="color:#ff0000">*</span>
-            <input type="text" name="Institute" id="Institute" required><br>
+            <input type="text" name="Institute" id="Institute"  class="main"  required><br>
+
             <label>MIS No.</label><span style="color:#ff0000">*</span>
-            <input type="number" name="Mis" id="Mis" placeholder="College Code + College MIS Number" required><br>
+            <input type="number" name="Mis" id="Mis" placeholder="College Code + College MIS Number"  class="main"  required><br>
+
             <label>Age</label><span style="color:#ff0000">*</span>
-            <input type="number" name="Age" id="Age" required><br>
+            <input type="number" name="Age" id="Age"  class="main"  required><br>
+
             <label>Mobile Number</label><span style="color:#ff0000">*</span>
-            <input type="number" name="MobileNo" id="MobileNo" required><br>
+            <input type="number" name="MobileNo" id="MobileNo"  class="main"  required><br>
+
             <label>Email ID</label><span style="color:#ff0000">*</span>
-            <input type="text" name="EmailID" id="EmailID" required><br>
+            <input type="text" name="EmailID" id="EmailID"  class="main"  required><br>
+
             <label>Resume URL</label><span style="color:#ff0000">*</span>
-            <input type="text" name="ResumeURL" id="ResumeURL" required><br>
+            <input type="text" name="ResumeURL" id="ResumeURL"   class="main" required><br>
+
             <label>Address</label><span style="color:#ff0000">*</span>
             <textarea id="Address" name="Address" required></textarea>
-            <input type="submit" value="Submit"><br><br>
+
+            <input type="submit" value="Submit"  class="main" ><br><br>
     </form>
 </div>
 <div class="notecontainer rcorners2">

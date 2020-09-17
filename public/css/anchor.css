@@ -1,4 +1,4 @@
-a {
+ .note {
     background-color: dodgerblue;
     color: white;
     width: 200px;
@@ -15,6 +15,6 @@ a {
 
 }
 
-a:hover, a:active {
+ a:hover, a:active {
     background-color: darkblue;
 }
