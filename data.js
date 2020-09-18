@@ -448,8 +448,8 @@ app.post('/showtable', (req,res) => {
             //open('https://virtual-interview-platform.herokuapp.com/user');
             //open('http://localhost:1337/user')
             //open('https://www.google.com/');
-            opn('https://virtual-interview-platform.herokuapp.com/user');
-            //res.sendFile(path.join(__dirname,'userres.html'));
+            //opn('https://virtual-interview-platform.herokuapp.com/user');
+            res.sendFile(path.join(__dirname,'userres.html'));
         }
 
     })
