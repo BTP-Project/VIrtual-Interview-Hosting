@@ -426,6 +426,7 @@ app.get('/sql',function (req,res){
 })
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+var opn = require('opn');
 app.post('/showtable', (req,res) => {
     console.log(req.body.candidate);
     const candidate = req.body.candidate;
@@ -447,7 +448,8 @@ app.post('/showtable', (req,res) => {
             //open('https://virtual-interview-platform.herokuapp.com/user');
             //open('http://localhost:1337/user')
             //open('https://www.google.com/');
-            res.redirect("/user");
+            opn('https://virtual-interview-platform.herokuapp.com/user');
+            //res.sendFile(path.join(__dirname,'userres.html'));
         }
 
     })
