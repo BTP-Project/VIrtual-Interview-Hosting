@@ -20,15 +20,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4007188-5d8c-4572-8f9c-7f20e0941bea" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;data.js">
-      <change afterPath="$PROJECT_DIR$/ContactUs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/photos/AMIT.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/photos/NALIN.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/photos/PRERIT.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info1.html" beforeDir="false" afterPath="$PROJECT_DIR$/info1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/.idea/login.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/close.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/About Icon.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/WHY.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/contact-us.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/contact.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/feedback.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-run.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/pencil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/power (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/power.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/question.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/services.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/side-why.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/start.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rinfo1.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin1.html" beforeDir="false" afterPath="$PROJECT_DIR$/signin1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup1.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/update1.html" beforeDir="false" afterPath="$PROJECT_DIR$/update1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
@@ -45,8 +81,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -69,7 +105,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.56" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -78,9 +114,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\indivisual projects\Virtual_Interview\Registration Form\public" />
+      <recent name="D:\indivisual projects\Virtual_Interview\Registration Form\views" />
       <recent name="D:\indivisual projects\Virtual_Interview\Registration Form" />
+      <recent name="D:\indivisual projects\Virtual_Interview\Registration Form\public\home" />
       <recent name="D:\indivisual projects\Virtual_Interview\Registration Form\public\profile" />
-      <recent name="D:\indivisual projects\Virtual_Interview\data\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,7 +165,11 @@
       <workItem from="1600317951873" duration="476000" />
       <workItem from="1600318985007" duration="2923000" />
       <workItem from="1600337988545" duration="1317000" />
-      <workItem from="1600351331670" duration="1870000" />
+      <workItem from="1600351331670" duration="4434000" />
+      <workItem from="1600362138085" duration="742000" />
+      <workItem from="1600405273711" duration="15500000" />
+      <workItem from="1600433326983" duration="4818000" />
+      <workItem from="1600443654494" duration="3839000" />
     </task>
     <servers />
   </component>
@@ -154,10 +196,14 @@
       <screen x="1920" y="0" width="1366" height="728" />
     </state>
     <state x="2057" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1599744360939" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600317946216">
+    <state x="532" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600414335609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1600317946216" />
+    <state x="532" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600414335609" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600408443179">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1600408443179" />
     <state x="2408" y="148" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1600248652767" />
     <state x="627" y="310" key="Github.ShareDialog" timestamp="1600140237984">
       <screen x="0" y="0" width="1536" height="824" />

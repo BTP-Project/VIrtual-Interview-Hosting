@@ -99,18 +99,20 @@
 <body>
 <div class ="navdiv">
     <ul class="nav">
-        <li><a href="/home" class="navbar navli" onclick="myHome()">Home</a></li>
-        <li><a href="/profile" class="navbar navli" onclick="myProfile()">Profile</a></li>
-        <li><a href="/update"  class="navbar navli" onclick="myUpdate()">Update</a></li>
-        <li><a href="/"  class="navbar navli" onclick="myRegister()">Register</a></li>
-        <li><a href="/"  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
-        <li><a href="/"  class="navbar navli" onclick="myFeatures()">Features</a></li>
-        <li style="float:right"><a class="active navbar navli" href="#about" onclick="myContactUs()">Contact Us</a></li>\
-        <li style="float:right"><a class="result navbar navli" href="#about" onclick="myResult()">Result</a></li>
+        <li><a  class="navbar navli" onclick="myHome()">Home</a></li>
+        <li><a  class="navbar navli" onclick="myProfile()">Profile</a></li>
+        <li><a  class="navbar navli" onclick="myUpdate()">Update</a></li>
+        <li><a class="navbar navli" onclick="myregister()">Register/Sign in</a></li>
+        <li><a  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
+        <li><a   class="navbar navli" onclick="myFeatures()">Features</a></li>
+        <li><a   href="https://virtual-interview-d921a.web.app" class="navbar navli" target="_blank">Web Chat</a></li>
+        <li><a  href="https://video-confrencing.herokuapp.com/" class="navbar navli" target="_blank">Video Conferencing</a></li>
+        <li style="float:right"><a class="active navbar navli"  onclick="myContactUs()">Contact Us</a></li>
+        <li style="float:right"><a class="result navbar navli"  onclick="myResult()">Result</a></li>
     </ul>
     <script>
         function myHome() {
-            window.open("/home");
+            window.open("/");
         }
         function myProfile() {
             window.open("/profile");
@@ -119,19 +121,19 @@
             window.open("/update");
         }
         function myRegister() {
-            window.open.replace("/");
+            window.open("/signin");
         }
         function myContactUs() {
-            window.location.replace("/contactus");
+            window.open("/contactus");
         }
         function myFeedback() {
-            window.location.replace("/feedback");
+            window.open("/feedback");
         }
         function myFeatures() {
-            window.location.replace("/features");
+            window.open("/features");
         }
         function myResult() {
-            window.location.replace("/result");
+            window.open("/result");
         }
     </script>
 </div>

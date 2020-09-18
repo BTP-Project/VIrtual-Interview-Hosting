@@ -4,11 +4,182 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!-- Linking CSS File -->
-    <link rel="stylesheet" href="Static/Homepage.css" >
+<!--    <link rel="stylesheet" href="Static/Homepage.css" >-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" >
     <!--  Linking CSS BootStrap  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <style>
+        .navbar-nav a{
+            font-family: Algerian;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 25px !important;
+        }
 
+        .navbar-light .navbar-brand{
+            color: white;
+            font-family:"Comic Sans MS";
+            font-size: 30px ;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active,
+        .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+            color: black !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link{
+            color: #fff !important;
+        }
+
+        .navbar-nav{
+            text-align: center !important;
+            margin-right: 1px !important;
+        }
+
+        .nav-link{
+            padding: .1rem .2rem ;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+            color: crimson !important;
+        }
+
+        .self{
+            font-family: Algerian;
+            font-size: 25px;
+            color:black;
+            margin: 20px;
+            /*font-w;*/
+        }
+
+        .self2{
+            font-family: "Comic Sans MS";
+            font-size: 25px;
+            color: green;
+        }
+
+        .self3{
+            font-family: "Algerian";
+            font-size: 40px;
+            color: red;
+        }
+
+        .BOX{
+            width: 100%;
+            border: 1px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Control the left side */
+        .left {
+            left: 0;
+            background-color: #a4508b;
+            background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
+        }
+
+        /* Control the right side */
+        .right {
+            right: 0;
+            background-color: #a4508b;
+            background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
+        }
+
+        /* If you want the content centered horizontally and vertically */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Style the image inside the centered container, if needed */
+        .centered img {
+            width: 550px;
+            border-radius: 50%;
+        }
+
+        :root {
+            background: #f5f6fa;
+            color: #9c9c9c;
+            font: 1rem "PT Sans", sans-serif;
+        }
+        html, body, .container {
+            height: 100%;
+        }
+        a {
+            color: inherit;
+        }
+        a:hover {
+            color: #7f8ff4;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .btn {
+            display: inline-block;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            border: 0;
+            outline: 0;
+            padding: 0;
+            transition: all 200ms ease-in;
+            cursor: pointer;
+        }
+        .btn--primary {
+            background: #7f8ff4;
+            color: #fff;
+            box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+            border-radius: 2px;
+            padding: 12px 36px;
+        }
+        .btn--primary:hover {
+            background: #6c7ff2;
+        }
+        .btn--primary:active {
+            background: #7f8ff4;
+            box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+        }
+        .btn--inside {
+            margin-left: -96px;
+        }
+        .form__field {
+            width: 360px;
+            background: #fff;
+            color: #a3a3a3;
+            font: inherit;
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+            border: 0;
+            outline: 0;
+            padding: 22px 18px;
+        }
+
+
+    </style>
 </head>
 <body>
 
@@ -76,7 +247,7 @@
                 <div class="container__item">
                     <form class="form">
                         <div class="animate__animated animate__fadeInLeft">
-                            <input id="candidate" type="email" class="form__field" placeholder="Your Institute Code Here" />
+                            <input id="candidate" type="email" class="form__field" placeholder="Your Institute Code Here"  />
                             <button id="btn2" type="button" class="btn btn--primary btn--inside uppercase">Check</button>
                         </div>
                     </form>
@@ -88,7 +259,7 @@
 
 <div class="split right">
     <div class="centered">
-        <img src="Static/finger.jpg" alt="Avatar man" class="animate__animated animate__fadeInUp">
+        <img src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/Result%20Activity-1/Public/finger.jpg" alt="Avatar man" class="animate__animated animate__fadeInUp">
         <div class="animate__animated animate__bounce animate__repeat-3" >
             <h2 class="self3" >Good Luck !!!</h2>
         </div>
@@ -99,7 +270,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 
-
+     var flag =0;
     $("#btn1").click(function(){
         var recruiter=$('#recruiter').val().trim();
         if(recruiter===""){
@@ -123,6 +294,7 @@
         var candidate=$('#candidate').val().trim();
         if(candidate===""){
             alert('Text Feild cannot be empty');
+
         }
         else {
 
@@ -130,11 +302,14 @@
                 candidate
             };
             alert(data.candidate);
+            flag=1;
             $.post('/showtable', data, () => {
-                console.log('server recieved our data')
             });
         }
     });
+    // if(flag==0){
+    //     window.open('/home');
+    // }
 
 </script>
 

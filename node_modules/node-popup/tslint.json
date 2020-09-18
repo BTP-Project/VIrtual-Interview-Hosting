@@ -1,0 +1,14 @@
+{
+    "rules": {
+        "no-console": [true, "warning"],
+        "interface-name": [true, "never-prefix"],
+        "object-literal-sort-keys": false,
+        "semicolon": [true, "always", "ignore-interfaces"],
+        "no-var-requires": false,
+        "no-unused-expression": false,
+        "one-variable-per-declaration": false,
+        "prefer-for-of": false,
+        "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+        "trailing-comma": [false]
+    }
+}
