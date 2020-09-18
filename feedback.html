@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <!--    <link rel="stylesheet" type="text/css" href="css/background.css"/>-->
+  <style>
+    a:link, a:visited {
+      background-color: #4CAF50;
+      color: white;
+      width: 82%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transform: translateX(6%);
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:hover, a:active {
+      background-color: #45a049;
+    }
+    body{
+      background-image: url("css/background.jpeg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    input[type=submit] {
+      width: 90%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transform: translateX(5%);
+    }
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    .container{
+      width: 40%;
+      height: auto;
+      margin: 100px auto;
+      background: white;
+      position: relative;
+      border-color: #4CAF50;
+    }
+    input {
+      width: 84%;
+      padding: 12px 20px;
+      margin: 3px 0;
+      margin-left: 8%;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      transition: 0.5s;
+      outline: none;
+    }
+    input:focus {
+      border: 3px solid #555;
+    }
+    .container label{
+      color: rgb(95, 84, 84);
+      font-size: large;
+      border-radius: 5px;
+      padding-left: 8%;
+      font-family:Comic Sans MS;
+    }
+    textarea {
+      width: 85%;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #fffefe;
+      font-size: 16px;
+      transform: translateX(9%);
+      resize: none;
+      font-family:Comic Sans MS;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <form action="/feedback" method="post">
+    <br>
+    <label>MIS No.:</label><span style="color:#ff0000">*</span>
+    <input type="text" name="MISNo"><br>
+    <label>Subject:</label><span style="color:#ff0000">*</span>
+    <input type="text" name="Subject"><br>
+    <label>Feedback:</label><span style="color:#ff0000">*</span>
+    <textarea placeholder="Your valuable feedback." name="Feedback"></textarea><br><br>
+    <input type="submit" value="Submit"><br><br>
+    <br><br>
+  </form>
+</div>
+</body>
+</html>

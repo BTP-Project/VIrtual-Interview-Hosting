@@ -27,6 +27,12 @@
 .active {
     background-color: #73AD21;
 }
+.result {
+    background-color: dodgerblue;
+}
+.result:hover {
+    background-color: deepskyblue;
+}
 .navdiv{
     margin-left: 0px;
     margin-right: 0px;

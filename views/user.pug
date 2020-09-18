@@ -1,0 +1,92 @@
+html
+    head
+        title=title
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" >
+        <!--  Linking CSS BootStrap  -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    style.
+        .column {
+            float: left;
+            width: 100%;
+            padding: 0 10px;
+        }
+        .row {margin: 0 -5px;}
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 20%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgb(75,0,130);
+            padding: 16px;
+            text-align: center;
+            border-radius: 25px;
+            background-color: white;
+        }
+
+        .card:hover {
+            -ms-transform: scale(1.2); /* IE 9 */
+            -webkit-transform: scale(1.2); /* Safari 3-8 */
+            transform: scale(1.2);
+        }
+
+        .v1 {
+            border-left:6px solid green;
+            height:50px;
+            top: 0;
+        }
+          body{
+              background: #9CECFB; /* fallback for old browsers */
+              background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* Chrome 10-25, Safari 5.1-6 */
+              background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: "Arial Black";
+              font-size:18px;
+
+        }
+    body
+
+    //div(class="card")
+
+
+
+    <center><div class="will"><b>Student Results </b></div></center>
+
+
+    each item in items
+        div(class="row")
+            div(class="column")
+                p
+                div(class="card")
+                     Mis #{item.ID} Name- #{item.Name} DSA Marks- #{item.Rating1} Coding Skill Marks- #{item.Rating2} Communication Skill Marks- #{item.Rating3} OverAll Skill-#{item.Rating}
+                     if item.Rating >5
+                      Qualifed Qualified
+                     else
+                      Not Not Qualified
+
+
+
+                       //if item.Rating>5
+                       //  Result- Qualified
+                       //else
+                       //  Result-Not Qualified
+
+            //tr
+
+
+
+
+

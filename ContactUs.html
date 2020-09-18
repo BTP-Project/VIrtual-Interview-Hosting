@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Navbar.css"/>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+        }
+
+        /* Float four columns side by side */
+        .column {
+            float: left;
+            width: 33%;
+            padding: 0 10px;
+        }
+
+        /* Remove extra left and right margins, due to padding */
+        .row {margin: 0 20px;}
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        .contact {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+        .contact:link{
+            background-color: black;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 90%;
+        }
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+            height: 350px;
+            border-color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div class ="navdiv">
+    <ul class="nav">
+        <li><a href="/home" class="navbar navli" onclick="myHome()">Home</a></li>
+        <li><a href="/profile" class="navbar navli" onclick="myProfile()">Profile</a></li>
+        <li><a href="/update"  class="navbar navli" onclick="myUpdate()">Update</a></li>
+        <li><a href="/"  class="navbar navli" onclick="myRegister()">Register</a></li>
+        <li><a href="/"  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
+        <li><a href="/"  class="navbar navli" onclick="myFeatures()">Features</a></li>
+        <li style="float:right"><a class="active navbar navli" href="#about" onclick="myContactUs()">Contact Us</a></li>\
+        <li style="float:right"><a class="result navbar navli" href="#about" onclick="myResult()">Result</a></li>
+    </ul>
+    <script>
+        function myHome() {
+            window.open("/home");
+        }
+        function myProfile() {
+            window.open("/profile");
+        }
+        function myUpdate() {
+            window.open("/update");
+        }
+        function myRegister() {
+            window.open.replace("/");
+        }
+        function myContactUs() {
+            window.location.replace("/contactus");
+        }
+        function myFeedback() {
+            window.location.replace("/feedback");
+        }
+        function myFeatures() {
+            window.location.replace("/features");
+        }
+        function myResult() {
+            window.location.replace("/result");
+        }
+    </script>
+</div>
+<h2 style="font-family: 'Comic Sans MS'"><center><b><u>Contact Us</u></b></center></h2>
+
+<div class="row">
+    <div class="column drift">
+        <div class="card">
+            <img src="photos/NALIN.jpeg" alt="Nalin" style="width:90%">
+            <h2>NALIN AGRAWAL</h2>
+            <p class="title">Computer Science and Engineering</p>
+            <p>IIIT PUNE</p>
+            <div style="margin: 24px 0;">
+                <a href="https://www.linkedin.com/in/nalin-agrawal-a73455191/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://twitter.com/NalinAgrawal12"><i class="fa fa-twitter-square" target="_blank"></i></a>
+                <a href="https://www.instagram.com/nalinagrawal382/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/nalin.agrawal.12" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+            <p><a href="mailto:nalinagrawal.iiitp@gmail.com" target="_blank" class ="contact">Contact</a></p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="photos/PRERIT.jpg" alt="Prerit" style="width:90%">
+            <h2>PRERIT KUMAR JHA</h2>
+            <p class="title">Computer Science and Engineering</p>
+            <p>IIIT PUNE</p>
+            <div style="margin: 24px 0;">
+                <a href="https://www.linkedin.com/in/prerit-kumar-jha-5513a3134/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="#"><i class="fa fa-twitter-square" target="_blank"></i></a>
+                <a href="https://www.instagram.com/preritkrjha" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100004937565856" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+            <p><a href="mailto:preritkrjha@gmail.com" target="_blank" class ="contact">Contact</a></p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="photos/AMIT.jpeg" alt="Amit" style="width:90%">
+            <h2>AMIT UPDHYAY</h2>
+            <p class="title">Computer Science and Engineering</p>
+            <p>IIIT PUNE</p>
+            <div style="margin: 24px 0;">
+                <a href="https://www.linkedin.com/in/amit-kumar-upadhyay-054b07193/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://twitter.com/AmitKum01184222"><i class="fa fa-twitter-square" target="_blank"></i></a>
+                <a href="https://www.instagram.com/u_amit65/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100009546061383" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+            <p><a href="mailto:amitupadhyay468@gmail.com" target="_blank" class ="contact">Contact</a></p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -25,7 +25,10 @@
         <li><a href="/profile" class="navbar navli" onclick="myProfile()">Profile</a></li>
         <li><a href="/update"  class="navbar navli" onclick="myUpdate()">Update</a></li>
         <li><a href="/"  class="navbar navli" onclick="myRegister()">Register</a></li>
-        <li style="float:right"><a class="active navbar navli" href="#about" onclick="myAboutus()">About Us</a></li>
+        <li><a href="/"  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
+        <li><a href="/"  class="navbar navli" onclick="myFeatures()">Features</a></li>
+        <li style="float:right"><a class="active navbar navli" href="#about" onclick="myContactUs()">Contact Us</a></li>\
+        <li style="float:right"><a class="result navbar navli" href="#about" onclick="myResult()">Result</a></li>
     </ul>
     <script>
         function myHome() {
@@ -40,8 +43,17 @@
         function myRegister() {
             window.open.replace("/");
         }
-        function myAboutUs() {
-            window.location.replace("/aboutus");
+        function myContactUs() {
+            window.location.replace("/contactus");
+        }
+        function myFeedback() {
+            window.location.replace("/feedback");
+        }
+        function myFeatures() {
+            window.location.replace("/features");
+        }
+        function myResult() {
+            window.location.replace("/result");
         }
     </script>
 </div>

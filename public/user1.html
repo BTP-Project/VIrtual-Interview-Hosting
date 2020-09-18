@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>Result Activity</title>
+    <style>
+    body{
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+    font-family: "Arial Black";
+}
+h1
+{
+    text-align: center;
+    font-size:50px;
+    color:steelblue;
+}
+form
+{
+    margin: 20px auto;
+    width: 320px;
+    color: steelblue;
+}
+input
+{
+    padding: 10px;
+    font-size: inherit;
+}
+input[type="text"]
+{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    background: #FAF6D9;
+    border: 2px solid steelblue;
+
+}
+input[type="number"]
+{
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    background: #FAF6D9;
+    border: 2px solid steelblue;
+}
+input[value="Submit"]
+{
+    width:115px;
+    height:45px;
+    border: none;
+    background:steelblue;
+    color: white;
+}
+input[value="Reset"]
+{
+    width:115px;
+    height:45px;
+    border: none;
+    background:steelblue;
+    color: white;
+}
+input:focus
+{
+    background: white;
+}
+    </style>
+</head>
+<body>
+<h1>Result Activity</h1>
+<form action="/sql">
+   <h4>Mis Number<input id="MisNumber" input type="number" placeholder="Enter Student's Mis Number" name="MisNumber"></h4>
+   <h4>Student Name<input id="Name" input type="text" placeholder="Enter Student's Name" name="Name"></h4>
+    <h4>DSA Marks<input id="DSA" input type="number" placeholder="Enter Student's DSA Marks" name="DSA"></h4>
+    <h4>Coding Skill<input id="CodingSkill" input type="number" placeholder="Enter Student's Coding Skill Marks" name="CodingSkill"></h4>
+    <h4>Communication Skill<input id="CommunicationSkill" input type="number" placeholder="Enter Student's Communication Skill Marks" name="CommunicationSkill"></h4>
+    <h4>Overall Skill<input id="OverallSkill" input type="number" placeholder="Enter Student's Overall marks" name="OverallSkill"></h4>
+    <input id="btn" input type="submit" value="Submit">
+    <input type="submit" value="Reset">
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $("#btn").click(function() {
+        var misnumber = $('#MisNumber').val().trim();
+        var nam = $('#Name').val().trim();
+        var ds = $('#DSA').val().trim();
+        var code = $('#CodingSkill').val().trim();
+        var com = $('#CommunicationSkill').val().trim();
+        var over = $('#OverallSkill').val().trim();
+        if (misnumber === "") {
+            alert('Mis Number cannot be empty');
+            // return res.redirect('/user1');
+        }
+        else if (nam === "") {
+
+            alert('Name cannot be empty');
+            // return res.redirect('/user1');
+        }
+        else if (ds === "") {
+
+            alert('DSA cannot be empty');
+
+
+        }
+        else if (code === "") {
+
+            alert('Coding marks cannot be empty');
+
+        }
+        else if (com === "") {
+
+            alert('Communication marks cannot be empty');
+
+
+        }
+        else if (over === "") {
+            alert('Overall Skill cannot be empty');
+
+            // onreset()
+        }
+    });
+ </script>
+</body>
+</html>

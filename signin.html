@@ -1,0 +1,167 @@
+<html>
+<head>
+<title> SignIn </title>
+    <style>
+                body
+                {
+                    margin: 0;
+                    padding: 0;
+                    background: #efefef;
+                    font-size: 16px;
+                    color: #777;
+                    font-family: sans-serif;
+                    font-weight: 300;
+                    background-image: url("https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/Nodejs-Express--OTP%20Email%20Varification/public/background.jpg");
+                }
+
+                #login-box
+                {
+                    position: relative;
+                    margin: 5% auto;
+                    height: 400px;
+                    width: 600px;
+                    background: #fff;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+                }
+
+                .left-box
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-sizing: border-box;
+                    padding: 40px;
+                    width: 300px;
+                    height: 400px;
+                    background-color: #5F4B8BFF;
+                }
+
+                h1
+                {
+                    margin: 0 0 20px 0;
+                    font-weight: 300;
+                    font-size: 28px;
+                    font-family: algerian;
+                    font-style: bold;
+                    color: black;
+                }
+
+                input[type="text"],
+                input[type="password"]
+                {
+                    display: block;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+                    padding: 4px;
+                    width: 220px;
+                    height: 32px;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #aaa;
+                    font-family: sans-serif;
+                    font-weight: 400;
+                    font-size: 15px;
+                    transition: 0.2s ease;
+                }
+
+                input[type="submit"]
+                {
+                    margin-bottom: 28px;
+                    width: 120px;
+                    height: 32px;
+                    background: #f44336;
+                    border: none;
+                    border-radius: 2px;
+                    color: #fff;
+                    font-family: sans-serif;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    transition: 0.2s ease;
+                    cursor: pointer;
+
+                }
+
+                input[type="submit"]:hover,
+                input[type="submit"]:focus
+                {
+                    background: #ff5722;
+                    transition: 0.2s ease;
+                }
+
+                .right-box
+                {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 40px;
+                    width: 300px;
+                    height: 400px;
+                    background-color : #E69A8DFF;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .or
+                {
+                    position: absolute;
+                    top: 180px;
+                    left: 280px;
+                    width: 40px;
+                    height: 40px;
+                    background: #efefef;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+                    line-height: 40px;
+                    text-align: center;
+                }
+                .self{
+                    text-align: center;
+                    font-family: "Comic Sans MS";
+                    font-size: 90%;
+                    color: blue;
+                }
+
+    </style>
+
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <div id="login-box">
+      <div class="left-box">
+        <h1><b> I am a Candidate </b></h1>
+        <hr>
+          <form action="/candidate" method="POST">
+          <input type="text" name="id1" placeholder="ID"/>
+          <input type="text" name="email1" placeholder="Username"/>
+          <input type="password" name="password1" placeholder="Password"/>
+          <input type="submit" name="signin-button1" value="Sign In"/>
+              <br>
+              <a href="signup" class="self"><b>Don't Have Account,Click Here</b></a>
+          </form>
+        </div>
+        <div class="right-box">
+         <h1><b> I am a Recruiter </b></h1>
+         <hr>
+          <form action="/recruiter" method="POST">
+          <input type="text" name="id" placeholder="ID"/>
+          <input type="text" name="email" placeholder="Username"/>
+          <input type="password" name="password" placeholder="Password"/>
+          <input type="submit" name="signin-button" value="Sign In"/>
+              <br>
+              <a href="signup" class="self"><b>Don't have Account,Click Here</b></a>
+          </form>
+
+        </div>
+        <div class="or">OR</div>
+    </div>
+
+
+
+
+
+</body>
+</html>

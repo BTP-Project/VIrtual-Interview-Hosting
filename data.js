@@ -108,8 +108,8 @@ app.post('/update',function (req,res){
     });
     connection.end();
 })
+app.get('/contactus',function (req,res){
+    res.sendFile(path.join(__dirname,'/ContactUs.html'))
+})
 
 app.listen(port);
-
-app.listen(port);
-

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Linking CSS File -->
+    <link rel="stylesheet" href="Static/Homepage.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" >
+    <!--  Linking CSS BootStrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#"><b>Virtual Interview, Result Portal</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" >Let Get's Started</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<br>
+<br>
+<p></p>
+<div class="split left">
+    <div class="centered">
+        <br>
+        <br>
+        <p></p>
+        <p  class="self2" >We re-engineered the services that we built for Security and Privacy. Result Platform to make it available for all. </p>
+        <p></p>
+        <p></p>
+        <br>
+        <div class="BOX" >
+            <div class="animate__animated animate__fadeInDown">
+                <p class="self">Recruiter</p>
+            </div>
+            <div class="container">
+                <div class="container__item">
+                    <form class="form">
+                        <div class="animate__animated animate__fadeInRight">
+                            <input id="recruiter" type="email" class="form__field" placeholder="Your Institute Code Here" />
+                            <button id="btn1" type="button" class="btn btn--primary btn--inside uppercase">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <p></p>
+            <div class="animate__animated animate__fadeInDown">
+                <p class="self">Candidate</p>
+            </div>
+            <div class="container">
+                <div class="container__item">
+                    <form class="form">
+                        <div class="animate__animated animate__fadeInLeft">
+                            <input id="candidate" type="email" class="form__field" placeholder="Your Institute Code Here" />
+                            <button id="btn2" type="button" class="btn btn--primary btn--inside uppercase">Check</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <img src="Static/finger.jpg" alt="Avatar man" class="animate__animated animate__fadeInUp">
+        <div class="animate__animated animate__bounce animate__repeat-3" >
+            <h2 class="self3" >Good Luck !!!</h2>
+        </div>
+        <p class="self2" >Have a great Future.</p>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+    $("#btn1").click(function(){
+        var recruiter=$('#recruiter').val().trim();
+        if(recruiter===""){
+            alert('Text Feild cannot be empty');
+        }
+        else {
+            // <a href="user.html">#btn1</a>
+            // document.location = 'http://somewhere.com/';
+            document.location='user1.html';
+            const data = {
+                recruiter
+            };
+            alert(data.recruiter);
+            $.post('/createtable', data, () => {
+                console.log('server recieved our data')
+            });
+        }
+    });
+
+    $("#btn2").click(function(){
+        var candidate=$('#candidate').val().trim();
+        if(candidate===""){
+            alert('Text Feild cannot be empty');
+        }
+        else {
+
+            const data = {
+                candidate
+            };
+            alert(data.candidate);
+            $.post('/showtable', data, () => {
+                console.log('server recieved our data')
+            });
+        }
+    });
+
+</script>
+
+</body>
+</html>
