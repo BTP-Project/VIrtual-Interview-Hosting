@@ -11,10 +11,16 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(express.static('public'));
 let config = {
-    host    : 'localhost',
-    user    : 'root',
-    password: '',
-    database: 'data'
+    host    : 'sql12.freemysqlhosting.net',
+    user    : 'sql12366310',
+    password: 'PhPkHwgP7H',
+    database: 'sql12366310'
+    //
+    // Server: sql12.freemysqlhosting.net
+    // Name: sql12366310
+    // Username: sql12366310
+    // Password: PhPkHwgP7H
+    // Port number: 3306
 };
 
 app.get('/info',function(req,res){
@@ -79,7 +85,7 @@ var transport=nodeMailer.createTransport({
     requireTLS:true,
     auth:{
         user:'virtualinterviewbtp@gmail.com',
-        pass:'abc123@a'
+        pass:'abc123@123'
     }
 })
 
@@ -151,7 +157,7 @@ app.post('/candidate', (req,res) => {
     // if(id=="" || username=="" || password==""){
     //     res.send('All Feilds are Mandatory');
     // }
-
+    MIS=id;
         console.log(id);
         let sql = `SELECT * FROM candidate WHERE ID = ${id}`;
         let mysql  = require('mysql');
@@ -187,6 +193,7 @@ app.post('/recruiter',(req,res) => {
     //     res.send('All Feilds are Mandatory');
     // }
     //else{
+    MIS = id;
         console.log(req.body);
         let sql = `SELECT * FROM recruiter WHERE ID = ${id}`;
         let mysql  = require('mysql');
@@ -215,7 +222,7 @@ app.post('/recruiter',(req,res) => {
 })
 
 app.post('/cr',(req,res) => {
-    //const id = req.body.id;
+    const id = MIS;
     const username = req.body.email;
     //console.log(id + username);
     const password = req.body.password;
@@ -244,7 +251,7 @@ app.post('/cr',(req,res) => {
 //post method to get the input feild data from candidate side
 app.post('/cc', (req,res) => {
     //
-    // const id = req.body.id1;
+     const id = MIS;
     const username = req.body.email1;
     const password = req.body.password1;
     console.log(req.body);
@@ -252,6 +259,7 @@ app.post('/cc', (req,res) => {
     //     res.send('All Feilds are Mandatory');
     // }
    // else{
+
         console.log(id);
         var misno = MIS;
         let sql = `INSERT INTO candidate (id,username,password) VALUES ('${misno}','${username}','${password}');`;
@@ -294,7 +302,7 @@ app.post('/sqlin',function (req,res){
             
             return res.sendFile(path.join(__dirname,'/info1.html'));
         }else{
-            return res.redirect('/profile');
+            return res.redirect('/signup');
         }
     });
     connection.end();
@@ -433,7 +441,7 @@ app.post('/showtable', (req,res) => {
     {
         if(err) throw err;
         else{
-            open('http://localhost:1337/user');
+            open('https://virtual-interview-platform.herokuapp.com/user');
         }
 
     })
