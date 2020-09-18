@@ -357,21 +357,25 @@ app.post('/createtable',(req,res) => {
         PRIMARY KEY(ID))`
     let mysql  = require('mysql');
     let connection = mysql.createConnection(config);
-    connection.query(sql,(err,result)=>{
-        if(err) throw err;
-        console.log(result);
-        res.send('DATABASE CREATED!!!');
-        app.use('/',function (req,res)
-        {
-            res.sendFile(path.join(__dirname,'/Public/user1.html'));
-        })
+    connection.query(sql,(err,result)=> {
+        if (err) {
+            res.redirect("/");
+        }
+        else {
+            console.log(result);
+
+            res.send('DATABASE CREATED!!!');
+            app.use('/', function (req, res) {
+                res.sendFile(path.join(__dirname, '/Public/user1.html'));
+            })
+        }
 
 
     })
 })
 
 app.get('/sql',function (req,res)
-{
+
     var name = req.query.Name;
     var mis=req.query.MisNumber;
     var dsa=req.query.DSA;
@@ -430,33 +434,32 @@ app.post('/showtable', (req,res) => {
     let mysql  = require('mysql');
     let connection = mysql.createConnection(config);
     connection.query(sql, (err, result) => {
-        if (err) throw err;
+        if (err) res.redirect("/");
         console.log(result);
     })
     connection1 = mysql.createConnection(config);
-    // console.log(markks);
 
     sql1=`SELECT * FROM ${candidate1};`;
     connection1.query(sql1,function (err,result)
     {
-        if(err) throw err;
+        if(err) res.redirect("/result")
         else{
             open('https://virtual-interview-platform.herokuapp.com/user');
         }
 
     })
-    // connection1=mysql.createConnection(dbb);
-
-    // res.sendFile(path.join(__dirname,'user.pug'));
-
 })
 
 app.get('/user',function (req,res)
 {
     connection1.query(sql1,function (err,rows,fields)
     {
-        if(err) throw err;
-        res.render('user',{title:"Student Details",items:rows})
+        if(err) {
+            res.redirect("/");
+        }
+        else {
+            res.render('user', {title: "Student Details", items: rows})
+        }
     })
 
 })
