@@ -374,7 +374,7 @@ app.post('/createtable',(req,res) => {
     })
 })
 
-app.get('/sql',function (req,res)
+app.get('/sql',function (req,res){
 
     var name = req.query.Name;
     var mis=req.query.MisNumber;
@@ -445,6 +445,7 @@ app.post('/showtable', (req,res) => {
         if(err) res.redirect("/result")
         else{
             open('https://virtual-interview-platform.herokuapp.com/user');
+            //open('http://localhost:1337/user')
         }
 
     })
