@@ -446,7 +446,8 @@ app.post('/showtable', (req,res) => {
         else{
             //open('https://virtual-interview-platform.herokuapp.com/user');
             //open('http://localhost:1337/user')
-            open('https://www.google.com/');
+            //open('https://www.google.com/');
+            res.redirect("/user");
         }
 
     })
