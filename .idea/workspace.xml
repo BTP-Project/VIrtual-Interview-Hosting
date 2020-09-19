@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4007188-5d8c-4572-8f9c-7f20e0941bea" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;data.js">
-      <change afterPath="$PROJECT_DIR$/userres.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info1.html" beforeDir="false" afterPath="$PROJECT_DIR$/info1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rinfo1.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update1.html" beforeDir="false" afterPath="$PROJECT_DIR$/update1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +131,8 @@
       <workItem from="1600362138085" duration="742000" />
       <workItem from="1600405273711" duration="15500000" />
       <workItem from="1600433326983" duration="4818000" />
-      <workItem from="1600443654494" duration="10650000" />
+      <workItem from="1600443654494" duration="11066000" />
+      <workItem from="1600485490835" duration="1252000" />
     </task>
     <servers />
   </component>

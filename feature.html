@@ -64,22 +64,24 @@
 			transition: 0.3s;
             text-align: center;
 		}
+
+
 	</style>
 	<link rel="stylesheet" type="text/css" href="css/Navbar.css"/>
 </head>
 <body>
 <div class ="navdiv">
 	<ul class="nav">
-		<li><a  class="navbar navli" onclick="myHome()">Home</a></li>
-		<li><a  class="navbar navli" onclick="myProfile()">Profile</a></li>
-		<li><a  class="navbar navli" onclick="myUpdate()">Update</a></li>
-		<li><a class="navbar navli" onclick="myregister()">Register/Sign in</a></li>
-		<li><a  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
-		<li><a   class="navbar navli" onclick="myFeatures()">Features</a></li>
+		<li><a  href="#"  class="navbar navli" onclick="myHome()">Home</a></li>
+		<li><a  href="#"  class="navbar navli" onclick="myProfile()">Profile</a></li>
+		<li><a  href="#"  class="navbar navli" onclick="myUpdate()">Update</a></li>
+		<li><a  href="#"  class="navbar navli" onclick="myregister()">Register/Sign in</a></li>
+		<li><a  href="#"  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
+		<li><a   href="#" class="navbar navli" onclick="myFeatures()">Features</a></li>
 		<li><a   href="https://virtual-interview-d921a.web.app" class="navbar navli" target="_blank">Web Chat</a></li>
 		<li><a  href="https://video-confrencing.herokuapp.com/" class="navbar navli" target="_blank">Video Conferencing</a></li>
-		<li style="float:right"><a class="active navbar navli"  onclick="myContactUs()">Contact Us</a></li>
-		<li style="float:right"><a class="result navbar navli"  onclick="myResult()">Result</a></li>
+		<li style="float:right"><a href="#"  class="active navbar navli"  onclick="myContactUs()">Contact Us</a></li>
+		<li style="float:right"><a href="#"   class="result navbar navli"  onclick="myResult()">Result</a></li>
 	</ul>
 	<script>
 		function myHome() {
@@ -91,7 +93,7 @@
 		function myUpdate() {
 			window.open("/update");
 		}
-		function myRegister() {
+		function myregister() {
 			window.open("/signin");
 		}
 		function myContactUs() {
@@ -125,7 +127,7 @@
 						<div class="sub-title">
 							Data Inheritence, Data Maintenence, and Works a Way Fully Secured. 
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -142,7 +144,7 @@
 						<div class="sub-title">
 							Data Storage and Retriving Data over all Components is Completely Synced.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -159,7 +161,7 @@
 						<div class="sub-title">
 							Storage and Retriving Data in Firestore over Chat Component using ReactJs. 
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -176,7 +178,7 @@
 						<div class="sub-title">
 							High Definition Video Calling System with some advance feature available.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -195,7 +197,7 @@
 						<div class="sub-title">
 							React Js Framework is used from Web Messenging with Cloud Firestore(Firebase).
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -215,7 +217,7 @@
 						<div class="sub-title">
 							Setting Routes and Redering all Components of websites with SQL.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -234,7 +236,7 @@
 						<div class="sub-title">
 							UI(User Interface) is quite easy for a newbie to use the website as well as App.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -253,7 +255,7 @@
 						<div class="sub-title">
 							At the time only Recruiter to Candidate Video Confrence is available for connections.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -270,7 +272,7 @@
 						<div class="sub-title">
 							End to End Live Chating and video Confrensing Simultaneously is Available .
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -287,7 +289,7 @@
 						<div class="sub-title">
 							A System for those to confirm meeting date/time as well as for proper Communication.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -304,7 +306,7 @@
 						<div class="sub-title">
 							Recruiter :- add rating live during interview. Candidate:- check result at the end.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a href="#">Read More</a>-->
 							</div>
 						</div>
 					</div>
@@ -317,10 +319,15 @@
 						<div class="header">
 							Contact Us
 						</div>
-						<div class="sub-title">
+						<div class="sub-title" onclick=myContactUs()>
 							For any query please Contact us .Please give Feedback over feedback portal. Thank You!!!.
 							<div class="readmore text-right">
-								<a href="#">Read More</a>
+<!--								<a onclick=myContactUs()>Read More</a>-->
+								<script>
+									function myContactUs(){
+										window.open('/contactus')
+									}
+								</script>
 							</div>
 						</div>
 					</div>
