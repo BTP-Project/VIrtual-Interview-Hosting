@@ -4,6 +4,7 @@ var app = express();
 const port = process.env.PORT || 1337;
 const bodyParser=require('body-parser');
 const open = require('open');
+var RecOrCan = 0;
 
 var MIS;
 
@@ -11,16 +12,15 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(express.static('public'));
 let config = {
-    host    : 'sql12.freemysqlhosting.net',
-    user    : 'sql12366310',
-    password: 'PhPkHwgP7H',
-    database: 'sql12366310'
-    //
-    // Server: sql12.freemysqlhosting.net
-    // Name: sql12366310
-    // Username: sql12366310
-    // Password: PhPkHwgP7H
-    // Port number: 3306
+    host    : 'sql12.freesqldatabase.com',
+    user    : 'sql12374191',
+    password: 'dNtslwJJ95',
+    database: 'sql12374191'
+
+    // host    : 'localhost',
+    // user    : 'root',
+    // password: '',
+    // database: 'virtualinterviewplatform'
 };
 
 app.get('/info',function(req,res){
@@ -58,18 +58,36 @@ app.get('/signin',(req,res) => {
 app.get('/feedback',function(req,res){
     res.sendFile(path.join(__dirname,'feedback.html'));
 })
+app.get('/server',function(req,res){
+    res.sendFile(path.join(__dirname,'servers.html'));
+})
+app.get('/forget',function(req,res){
+    res.sendFile(path.join(__dirname,'/forgetpage.html'));
+});
 
 app.get('/result',(req,res) => {
-    res.sendFile(path.join(__dirname,'result.html'));
+    if(RecOrCan==1){
+        res.sendFile(path.join(__dirname,'HomePageRecruter.html'));
+    }else{
+        res.sendFile(path.join(__dirname,'HomePageCandidate.html'));
+    }
+
+})
+
+app.get('/ResultRec',(req,res) => {
+    res.sendFile(path.join(__dirname,'HomePageRecruter.html'));
+})
+app.get('/ResultCan',(req,res) => {
+    res.sendFile(path.join(__dirname,'HomePageCandidate.html'));
 })
 
 app.get('/user1',function(req,res){
     res.sendFile(path.join(__dirname,'public/user1.html'));
 })
-app.get('/users',function(req,res){
-    console.log("hoo");
-    res.sendFile(path.join(__dirname,'user.pug'));
-})
+// app.get('/user',function(req,res){
+//     console.log("hoo");
+//     res.sendFile(path.join(__dirname,'views/user.pug'));
+// })
 app.get('/update',function (req,res) {
     res.sendFile(path.join(__dirname, '/update.html'))
 })
@@ -158,6 +176,7 @@ app.post('/candidate', (req,res) => {
     //     res.send('All Feilds are Mandatory');
     // }
     MIS=id;
+    RecOrCan = 0;
         console.log(id);
         let sql = `SELECT * FROM candidate WHERE ID = ${id}`;
         let mysql  = require('mysql');
@@ -189,6 +208,8 @@ app.post('/recruiter',(req,res) => {
     const username = req.body.email;
     console.log(id + username);
     const password = req.body.password;
+
+    RecOrCan =1;
     // if(id=="" || username=="" || password==""){
     //     res.send('All Feilds are Mandatory');
     // }
@@ -230,6 +251,7 @@ app.post('/cr',(req,res) => {
     //     res.send('All Feilds are Mandatory');
     // }
     //else{
+    RecOrCan =1;
         console.log(req.body);
         var misno = MIS;
         let sql = `INSERT INTO recruiter(id,username,password) VALUES ('${misno}','${username}','${password}');`;
@@ -259,7 +281,7 @@ app.post('/cc', (req,res) => {
     //     res.send('All Feilds are Mandatory');
     // }
    // else{
-
+    RecOrCan =0;
         console.log(id);
         var misno = MIS;
         let sql = `INSERT INTO candidate (id,username,password) VALUES ('${misno}','${username}','${password}');`;
@@ -297,17 +319,60 @@ app.post('/sqlin',function (req,res){
     let mysql  = require('mysql');
     let connection = mysql.createConnection(config);
     let sql = `INSERT INTO formdatabase(MISNo,Name,Institute,Age,MobileNo,Address,ResumeURL,EmailID) VALUES (${MisNo},'${Name}','${Institute}',${Age},'${MobileNo}','${Address}','${ResumeURL}','${EmailID}');`;
+    console.log(MisNo);
+    console.log(Name);
+    console.log(Institute);
+    console.log(Age);
+    console.log(MobileNo);
+    console.log(Address);
+    console.log(ResumeURL);
+    console.log(EmailID);
     connection.query(sql,function (error,rows,fields){
         if(!!error){
             
             return res.sendFile(path.join(__dirname,'/info1.html'));
         }else{
+            console.log(MisNo);
             return res.redirect('/signup');
         }
     });
     connection.end();
 })
 
+app.get('/initialize',function (req,res){
+    let mysql  = require('mysql');
+    let connection = mysql.createConnection(config);
+    let sql = `CREATE TABLE formdatabase(
+                    MISNo BIGINT UNIQUE,
+                    Name VARCHAR(50),
+                    Institute VARCHAR(100),
+                    Age INT,
+                    MobileNo VARCHAR(11),
+                    Address VARCHAR(100),
+                    ResumeURL VARCHAR(200),
+                    EmailID VARCHAR(200),
+                    PRIMARY KEY(MISNo));
+                CREATE TABLE candidate (
+                    id BIGINT,
+                    username VARCHAR(50),
+                    password VARCHAR(50),
+                    PRIMARY KEY(id));
+                CREATE TABLE recruiter (
+                    id BIGINT,
+                    username VARCHAR(50),
+                    password VARCHAR(50),
+                    PRIMARY KEY(id));`;
+
+    connection.query(sql,function (error,rows,fields){
+        if(!!error){
+            return res.redirect('/');
+        }else{
+            console.log(error);
+            return res.redirect('/initialze');
+        }
+    });
+    connection.end();
+})
 
 app.post('/update',function (req,res){
 
@@ -410,7 +475,7 @@ app.get('/sql',function (req,res){
     let mysql  = require('mysql');
     let connection = mysql.createConnection(config);
     let sql =`INSERT INTO ${recruter1}(ID,Name ,Rating1,Rating2,Rating3,Rating) VALUES (${mis},'${name}',${dsa},${coding},${comm},${over});`;
-
+    // let sql =`CREATE TABLE NEWTABLE(MIS INT, NAME VARCHAR(10));`;
     connection.query(sql,function (error,result,fields){
         if(!!error){
             // alert(
@@ -418,7 +483,10 @@ app.get('/sql',function (req,res){
         }else{
             // console.log(candidate1);
             console.log("success");
-            return res.sendFile(path.join(__dirname,'/result.html'));
+            if(RecOrCan==1){
+                return res.sendFile(path.join(__dirname,'/HomePageRecruter.html'));
+            }
+            return res.sendFile(path.join(__dirname,'/HomePageCandidate.html'));
             //  res.redirect('/HomePage.html');
         }
     })
@@ -445,11 +513,12 @@ app.post('/showtable', (req,res) => {
     {
         if(err) res.redirect("/result")
         else{
-            //open('https://virtual-interview-platform.herokuapp.com/user');
-            //open('http://localhost:1337/user')
+            open('https://virtual-interview-platform.herokuapp.com/user');
+            // open('http://localhost:1337/user')
             //open('https://www.google.com/');
             //opn('https://virtual-interview-platform.herokuapp.com/user');
-            res.sendFile(path.join(__dirname,'userres.html'));
+            res.redirect('/user');
+            // res.sendFile(path.join(__dirname,'userres.html'));
         }
 
     })
@@ -467,6 +536,45 @@ app.get('/user',function (req,res)
         }
     })
 
+})
+
+app.post('/forgetdata',function (req,res){
+
+    const role =  req.body.role;
+    const email = req.body.gmail;
+    const password = req.body.passi;
+    console.log(role,email,password);
+    if(role == "stud"){
+        let mysql  = require('mysql');
+        let connection = mysql.createConnection(config);
+        let sql = `UPDATE recruiter SET password ='${password}' WHERE username = '${email}'`;
+        res.sendFile(path.join(__dirname,'/forgetpage.html'));
+        connection.query(sql,(err,results)=>{
+            if(err)  {
+                console.log(err);
+                res.sendFile(path.join(__dirname,'/forgetpage.html'));
+            }
+            else {
+                res.redirect('/');
+            }
+        })
+    }
+    else{
+        let mysql  = require('mysql');
+        let connection = mysql.createConnection(config);
+        let sql = `UPDATE candidate SET password ='${password}' WHERE username = '${email}'`;
+        res.sendFile(path.join(__dirname,'/forgetpage.html'));
+        connection.query(sql,(err,results)=>{
+            if(err)  {
+                console.log(err);
+                res.redirect('/forget');
+            }
+            else {
+                res.redirect('/');
+            }
+        })
+    }
+    res.redirect('/');
 })
 
 app.listen(port);

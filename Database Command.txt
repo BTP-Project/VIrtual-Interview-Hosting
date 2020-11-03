@@ -1,0 +1,11 @@
+CREATE TABLE formdatabase(MISNo BIGINT UNIQUE,Name VARCHAR(50),Institute VARCHAR(100),Age INT,MobileNo VARCHAR(11),Address VARCHAR(100),ResumeURL VARCHAR(200),EmailID VARCHAR(200),PRIMARY KEY(MISNo));
+CREATE TABLE candidate (
+    id BIGINT,
+    username VARCHAR(50),
+    password VARCHAR(50),
+	PRIMARY KEY(id));
+CREATE TABLE recruiter (
+    id BIGINT,
+    username VARCHAR(50),
+    password VARCHAR(50),
+	PRIMARY KEY(id));

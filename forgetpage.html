@@ -1,0 +1,109 @@
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/OTP/background.jpg);
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+
+                            <h3><i class="fa fa-lock fa-4x"></i></h3>
+                            <h2 class="text-center">Forgot Password?</h2>
+                            <p>You can reset your password here.</p>
+                            <div class="panel-body">
+
+                                <form action="/forgetdata" method="POST" name="form1" class="form">
+                                    <fieldset>
+                                        <div class="form-group">
+
+                                            <input type="radio" id="male" name="role" value="stud">
+                                            <label for="male">I am A Student</label><br>
+                                            <input type="radio" id="female" name="role" value="recuit">
+                                            <label for="female">I am a Recruiter</label><br>
+
+                                        </div>
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                            <input id="emailInput" name="gmail" placeholder="Email address" class="form-control" type="email"  required>
+
+                                        </div>
+
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-open color-blue"></i></span>
+                                            <input id="pass" name="passi" placeholder="Set New Password" class="form-control" type="password"  required>
+
+                                        </div>
+                                    <br>
+                            <div class="form-group">
+                                <input class="btn btn-lg btn-primary btn-block" value="Submit Request" type="submit" id="forget">
+                            </div>
+                            </fieldset>
+                            </form>
+                                <script src="https://smtpjs.com/v3/smtp.js">
+                                </script>
+                                <script>
+                                    const btn = document.querySelector('#forget');
+
+                                    // handle click button
+                                    btn.onclick = function () {
+                                        const rbs = document.querySelectorAll('input[name="role"]');
+                                        let selectedValue;
+                                        for (const rb of rbs) {
+                                            if (rb.checked) {
+                                                selectedValue = rb.value;
+                                                break;
+                                            }
+                                        }
+                                        function randomNumber(min, max) {
+                                            return Math.trunc(Math.random() * (max - min) + min)    ;
+                                        }
+
+                                        var random = randomNumber(1000, 2000);
+                                        Email.send({
+                                            Host : "smtp.gmail.com",
+                                            Username : "123harshit321@gmail.com",
+                                            Password : "Rounak@795#",
+                                            To : document.form1.gmail.value,
+                                            From : "123harshit321@gmail.com",
+                                            Subject : "OTP",
+                                            Body : random
+                                        }).then(
+                                            message => alert('Thank You')
+                                        );
+                                        alert('OTP SENT');
+                                        var otp = prompt('Enter OTP Recieved In Your Mail Box');
+                                        while(otp!=random){
+                                            otp = prompt('Wrong OTP Recieved, Enter Again ');
+                                        }
+                                        alert('Passward Reset Sucessful');
+                                        //alert(selectedValue);
+                                        // alert(document.form1.gmail.value);
+                                    };
+
+                                </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
