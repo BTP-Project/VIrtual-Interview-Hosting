@@ -65,7 +65,7 @@
 
         .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active,
         .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-            color: black !important;
+            color: blue !important;
         }
 
         .navbar-light .navbar-nav .nav-link{
@@ -141,6 +141,15 @@
             background: #2196f3!important;
             box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3!important;
         }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: -999;
+        }
+        body {
+            padding-bottom: 10%;
+        }
     </style>
 </head>
 <body>
@@ -150,7 +159,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
 
-        <a class="navbar-brand" onclick=mysignin() style ="color: black">Welcome, To VIP</a>
+        <a class="navbar-brand" onclick=mysignin() style ="color: black"><img src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/logo.jpg" height="100px" width="150px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -292,7 +301,9 @@
 
     </div>
 </div>
-
+<footer>
+    <center><p style="color:gray; font-family: 'Comic Sans'"><b>Your are using VIP : Virtual Interview Platform</b></p></center>
+</footer>
 <!--<div class="row1 mmmm">-->
 <!--    <div class="column1">-->
 <!--        <img class="animate__animated animate__bounce animate__repeat-2" class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/home.PNG" alt="Snow" style="width:100%;">-->

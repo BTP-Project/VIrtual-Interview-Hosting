@@ -21,11 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="e4007188-5d8c-4572-8f9c-7f20e0941bea" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;data.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/feedback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info1.html" beforeDir="false" afterPath="$PROJECT_DIR$/info1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rinfo1.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servers.html" beforeDir="false" afterPath="$PROJECT_DIR$/servers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin1.html" beforeDir="false" afterPath="$PROJECT_DIR$/signin1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup1.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update1.html" beforeDir="false" afterPath="$PROJECT_DIR$/update1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +147,7 @@
       <workItem from="1604294036464" duration="7077000" />
       <workItem from="1604378926993" duration="37000" />
       <workItem from="1604380741697" duration="7678000" />
-      <workItem from="1604395263035" duration="11960000" />
+      <workItem from="1604395263035" duration="14092000" />
     </task>
     <servers />
   </component>

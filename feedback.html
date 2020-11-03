@@ -88,7 +88,7 @@
 </head>
 <body>
 <div class="container">
-  <form action="/feedback1" method="post">
+  <form action="/feedback1" method="post" name="form1">
     <br>
     <label>MIS No.:</label><span style="color:#ff0000">*</span>
     <input type="text" name="MISNo"><br>
@@ -96,9 +96,31 @@
     <input type="text" name="Subject"><br>
     <label>Feedback:</label><span style="color:#ff0000">*</span>
     <textarea placeholder="Your valuable feedback." name="Feedback"></textarea><br><br>
-    <input type="submit" value="Submit"><br><br>
+    <input type="submit" id="forget" value="Submit"><br><br>
     <br><br>
   </form>
 </div>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+  const btn = document.querySelector('#forget');
+
+  // handle click button
+  btn.onclick = function () {
+    var sub= document.form1.MISNo.value + " - " + document.form1.Subject.value;
+    Email.send({
+      Host : "smtp.gmail.com",
+      Username : "123harshit321@gmail.com",
+      Password : "Rounak@795#",
+      To : "optimusprimecybertron999@gmail.com",
+      From : "123harshit321@gmail.com",
+      Subject : sub,
+      Body : document.form1.Feedback.value
+    });
+    alert('Thank You for your valueable feedback !!!')
+    window.open("/");
+  };
+
+</script>
 </body>
 </html>
