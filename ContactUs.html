@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel = "icon" href ="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/logo1.jpg" type = "image/x-icon">
     <title>Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -102,11 +103,11 @@
         <li><a  class="navbar navli" onclick="myHome()">Home</a></li>
         <li><a  class="navbar navli" onclick="myProfile()">Profile</a></li>
         <li><a  class="navbar navli" onclick="myUpdate()">Update</a></li>
-        <li><a class="navbar navli" onclick="myregister()">Register/Sign in</a></li>
+        <li><a  class="navbar navli" onclick="myregister()">Register/Sign in</a></li>
         <li><a  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
-        <li><a   class="navbar navli" onclick="myFeatures()">Features</a></li>
-        <li><a   href="https://virtual-interview-d921a.web.app" class="navbar navli" target="_blank">Web Chat</a></li>
-        <li><a  href="https://video-confrencing.herokuapp.com/" class="navbar navli" target="_blank">Video Conferencing</a></li>
+        <li><a  class="navbar navli" onclick="myFeatures()">Features</a></li>
+        <li><a  href="https://virtual-interview-d921a.web.app" class="navbar navli" target="_blank">Web Chat</a></li>
+        <li><a  class="navbar navli" target="_blank" onclick="myServer()">Video Conferencing</a></li>
         <li style="float:right"><a class="active navbar navli"  onclick="myContactUs()">Contact Us</a></li>
         <li style="float:right"><a class="result navbar navli"  onclick="myResult()">Result</a></li>
     </ul>
@@ -120,7 +121,7 @@
         function myUpdate() {
             window.open("/update");
         }
-        function myregister() {
+        function myRegister() {
             window.open("/signin");
         }
         function myContactUs() {
@@ -134,6 +135,9 @@
         }
         function myResult() {
             window.open("/result");
+        }
+        function myServer(){
+            window.open("/server");
         }
     </script>
 </div>

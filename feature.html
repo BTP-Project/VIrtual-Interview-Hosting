@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel = "icon" href ="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/logo1.jpg" type = "image/x-icon">
 	<title>Our Features</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
@@ -72,16 +73,16 @@
 <body>
 <div class ="navdiv">
 	<ul class="nav">
-		<li><a  href="#"  class="navbar navli" onclick="myHome()">Home</a></li>
-		<li><a  href="#"  class="navbar navli" onclick="myProfile()">Profile</a></li>
-		<li><a  href="#"  class="navbar navli" onclick="myUpdate()">Update</a></li>
-		<li><a  href="#"  class="navbar navli" onclick="myregister()">Register/Sign in</a></li>
-		<li><a  href="#"  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
-		<li><a   href="#" class="navbar navli" onclick="myFeatures()">Features</a></li>
-		<li><a   href="https://virtual-interview-d921a.web.app" class="navbar navli" target="_blank">Web Chat</a></li>
-		<li><a  href="https://video-confrencing.herokuapp.com/" class="navbar navli" target="_blank">Video Conferencing</a></li>
-		<li style="float:right"><a href="#"  class="active navbar navli"  onclick="myContactUs()">Contact Us</a></li>
-		<li style="float:right"><a href="#"   class="result navbar navli"  onclick="myResult()">Result</a></li>
+		<li><a  class="navbar navli" onclick="myHome()">Home</a></li>
+		<li><a  class="navbar navli" onclick="myProfile()">Profile</a></li>
+		<li><a  class="navbar navli" onclick="myUpdate()">Update</a></li>
+		<li><a  class="navbar navli" onclick="myregister()">Register/Sign in</a></li>
+		<li><a  class="navbar navli" onclick="myFeedback()">Feedback</a></li>
+		<li><a  class="navbar navli" onclick="myFeatures()">Features</a></li>
+		<li><a  href="https://virtual-interview-d921a.web.app" class="navbar navli" target="_blank">Web Chat</a></li>
+		<li><a  class="navbar navli" target="_blank" onclick="myServer()">Video Conferencing</a></li>
+		<li style="float:right"><a class="active navbar navli"  onclick="myContactUs()">Contact Us</a></li>
+		<li style="float:right"><a class="result navbar navli"  onclick="myResult()">Result</a></li>
 	</ul>
 	<script>
 		function myHome() {
@@ -93,7 +94,7 @@
 		function myUpdate() {
 			window.open("/update");
 		}
-		function myregister() {
+		function myRegister() {
 			window.open("/signin");
 		}
 		function myContactUs() {
@@ -107,6 +108,9 @@
 		}
 		function myResult() {
 			window.open("/result");
+		}
+		function myServer(){
+			window.open("/server");
 		}
 	</script>
 </div>
