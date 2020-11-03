@@ -86,13 +86,21 @@
         }
 
         .BOX{
-            margin-left: 350px;
-            margin-right: 350px;
             text-align: center;
             color: darkblue;
             background: palegreen;
             opacity: 0.75;
             font-weight: bold;
+        }
+        @media (max-width: 1000px) {
+
+            .BOX {
+                transform: translate(0px, -1000px);
+            }
+            .mmmm{
+                transform: translate(0px, -900px);
+            }
+
         }
 
         .Below-Sliding-Window{
@@ -194,8 +202,9 @@
             <div class="carousel-caption d-none d-md-block">
                 <div class="BOX">
                     <h5 class="animate__animated animate__fadeInLeft">Get's Started</h5>
+                    <p class="animate__animated animate__bounce animate__repeat-3"><a onclick=mysignin()  class="Neon-light mmmm">Click Here!</a></p>
                 </div>
-                <p class="animate__animated animate__bounce animate__repeat-3 "><a onclick=mysignin()  class="Neon-light">Click Here!</a></p>
+
             </div>
         </div>
         <div class="carousel-item">
@@ -203,8 +212,9 @@
             <div class="carousel-caption d-none d-md-block">
                 <div class="BOX">
                     <h5 class="animate__animated animate__fadeInLeft">Get's Started</h5>
+                    <p class="animate__animated animate__bounce animate__repeat-3"><a onclick=mysignin() class="Neon-light mmmm">Click Here!</a></p>
                 </div>
-                <p class="animate__animated animate__bounce animate__repeat-3 "><a onclick=mysignin() class="Neon-light">Click Here!</a></p>
+
             </div>
         </div>
         <div class="carousel-item">
@@ -212,8 +222,9 @@
             <div class="carousel-caption d-none d-md-block">
                 <div class="BOX">
                     <h5 class="animate__animated animate__fadeInLeft">Get's Started</h5>
+                    <p class="animate__animated animate__bounce animate__repeat-3 "><a onclick=mysignin() class="Neon-light mmmm">Click Here!</a></p>
                 </div>
-                <p class="animate__animated animate__bounce animate__repeat-3 "><a onclick=mysignin() class="Neon-light">Click Here!</a></p>
+
             </div>
         </div>
         <script>
@@ -235,7 +246,7 @@
 <!-- Image Below Sliding Window -->
 
 
-<div class="row">
+<div class="row mmmm">
     <div class="column">
         <img class="animate__animated animate__fadeInRight" style="animation-delay: 3s" class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/Capture.PNG" alt="Snow" style="width:100%">
     </div>
@@ -247,45 +258,58 @@
 
 <!-- A Horizontal Line -->
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-left:100px;margin-right:100px">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-left:100px;margin-right:100px" class="mmmm">
 
 <!-- Bottom Nav Bar -->
 
-<div class="row1">
+<div class="row1 mmmm">
     <div class="column1">
         <img class="animate__animated animate__bounce animate__repeat-2" class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/home-run.png" alt="Snow" style="width:100%;"  >
-    </div>
-    <div class="column1">
-        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/power%20(2).png" alt="Forest" style="width:100%;" >
-    </div>
-    <div class="column1">
-        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/pencil.png" alt="Forest" style="width:100%" >
-    </div>
-    <div class="column1">
-        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/question.png" alt="Forest" style="width:100%" >
-    </div>
-    <div class="column1">
-        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/contact-us.png" alt="Forest" style="width:100%" >
-    </div>
-</div>
-
-<div class="row1">
-    <div class="column1">
+        <br>
         <img class="animate__animated animate__bounce animate__repeat-2" class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/home.PNG" alt="Snow" style="width:100%;">
     </div>
     <div class="column1">
+        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/power%20(2).png" alt="Forest" style="width:100%;" >
+        <br>
         <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/start.PNG" alt="Forest" style="width:100%;" onclick=mysignin()>
     </div>
     <div class="column1">
+        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/pencil.png" alt="Forest" style="width:100%" >
+        <br>
         <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/feedback.PNG" alt="Forest" style="width:100%" onclick=myfeedback()>
+
     </div>
     <div class="column1">
+        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/question.png" alt="Forest" style="width:100%" >
+        <br>
         <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/About%20Icon.PNG" alt="Forest" style="width:100%" onclick=myContactUs()>
+
     </div>
     <div class="column1">
+        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/contact-us.png" alt="Forest" style="width:100%" >
+        <br>
         <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/contact.PNG" alt="Forest" style="width:100%" onclick=myContactUs()>
+
     </div>
 </div>
+
+<!--<div class="row1 mmmm">-->
+<!--    <div class="column1">-->
+<!--        <img class="animate__animated animate__bounce animate__repeat-2" class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/home.PNG" alt="Snow" style="width:100%;">-->
+<!--    </div>-->
+<!--    <div class="column1">-->
+<!--        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/start.PNG" alt="Forest" style="width:100%;" onclick=mysignin()>-->
+<!--    </div>-->
+<!--    <div class="column1">-->
+<!--        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/feedback.PNG" alt="Forest" style="width:100%" onclick=myfeedback()>-->
+<!--    </div>-->
+<!--    <div class="column1">-->
+<!--        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/About%20Icon.PNG" alt="Forest" style="width:100%" onclick=myContactUs()>-->
+<!--    </div>-->
+<!--    <div class="column1">-->
+<!--        <img class="animate__animated animate__bounce animate__repeat-2"  class="Below-Sliding-Window" src="https://raw.githubusercontent.com/BTP-Project/Virtual-Interview/master/HomePage/contact.PNG" alt="Forest" style="width:100%" onclick=myContactUs()>-->
+<!--    </div>-->
+<!--</div>-->
 <script>
     function myfeedback(){
         window.open('/feedback');
@@ -296,7 +320,7 @@
 </script>
 <!-- A Horizontal Line -->
 
-<hr style="height:2px;border-width:2px;color:gray;background-color:gray;margin-left:100px;margin-right:100px">
+<hr style="height:2px;border-width:2px;color:gray;background-color:gray;margin-left:100px;margin-right:100px" class="mmmm">
 
 
 <!--  Linking Javascript BootStrap  -->
