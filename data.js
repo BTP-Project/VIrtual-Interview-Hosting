@@ -513,7 +513,7 @@ app.post('/showtable', (req,res) => {
     {
         if(err) res.redirect("/result")
         else{
-            open('https://virtual-interview-platform.herokuapp.com/user');
+            //open('https://virtual-interview-platform.herokuapp.com/user');
             // open('http://localhost:1337/user')
             //open('https://www.google.com/');
             //opn('https://virtual-interview-platform.herokuapp.com/user');

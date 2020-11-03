@@ -20,18 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4007188-5d8c-4572-8f9c-7f20e0941bea" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;data.js">
-      <change afterPath="$PROJECT_DIR$/Database Command.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomePageCandidate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomePageRecruter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forgetpage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mysql/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mysql/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/sql/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sql/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signin1.html" beforeDir="false" afterPath="$PROJECT_DIR$/signin1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +135,7 @@
       <workItem from="1604294036464" duration="7077000" />
       <workItem from="1604378926993" duration="37000" />
       <workItem from="1604380741697" duration="7678000" />
-      <workItem from="1604395263035" duration="2902000" />
+      <workItem from="1604395263035" duration="3881000" />
     </task>
     <servers />
   </component>
