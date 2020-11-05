@@ -22,14 +22,7 @@
     <list default="true" id="e4007188-5d8c-4572-8f9c-7f20e0941bea" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;data.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature.html" beforeDir="false" afterPath="$PROJECT_DIR$/feature.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info1.html" beforeDir="false" afterPath="$PROJECT_DIR$/info1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rinfo1.html" beforeDir="false" afterPath="$PROJECT_DIR$/rinfo1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update1.html" beforeDir="false" afterPath="$PROJECT_DIR$/update1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/photos/MUKESH.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +60,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.5" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../servers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../New folder/WebChat1" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -147,7 +140,8 @@
       <workItem from="1604395263035" duration="14429000" />
       <workItem from="1604418196934" duration="1520000" />
       <workItem from="1604421078133" duration="292000" />
-      <workItem from="1604487669839" duration="449000" />
+      <workItem from="1604487669839" duration="1061000" />
+      <workItem from="1604549140501" duration="1257000" />
     </task>
     <servers />
   </component>
